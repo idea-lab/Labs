@@ -1,6 +1,6 @@
 # Labs
 Labs created by the Dev Team
 
-*Calculator
+* Calculator
 
-*Other labs
+* Other labs

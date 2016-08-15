@@ -1,0 +1,59 @@
+<html>
+    
+	<head>
+	</head>
+
+	<body>
+        
+        
+        <!-- Javascript Code -->
+        
+        <script>
+        
+            function Check_Login() {
+            
+                var usr_input = document.getElementById('username_id').value;
+        
+                var pass_input = document.getElementById('password_id').value;
+            
+                var usr = "idealab";
+            
+                var pass = "testPassword";
+            
+                if(usr_input == usr && pass_input == pass){
+            
+                    document.getElementById('notification').innerHTML = "HURRAY! You Entered the correct username/password!!!";
+            
+                } else {
+            
+                    document.getElementById('notification').innerHTML = "Username/Password combination is not correct";
+            
+                }
+            
+            }
+            
+            
+            
+            /* The function Check_Login() notifies the user as to the username and password from forms match hardcoded username and password values.*/
+
+            
+        </script>
+        
+        <!-- HTML form. This contains the username and password text inputs -->
+        
+        <form id="login_form">
+            Username:<br>
+            <input id="username_id" type="text" name="username"><br>
+            Password:<br>
+            <input id="password_id" type="password" name="password">
+        </form>
+        
+        <!-- HTML button. This button calls the function Check_Login() from the code section. -->
+        
+        <input type="button" onclick="Check_Login()" value="submit">
+        
+        <p id="notification"></p>
+        
+    </body>	
+
+</html>

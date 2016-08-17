@@ -11,7 +11,12 @@ for y in range(0, 10):
 #for loops going down
 for i in range(10, 0, -1):
 	print(i)
+print("\n")
+#looping through elements of a list
+myList=[2, 3, 5, 1, 7]
 
+for i in myList:
+	print(i)
 
 #IF/ELSE
 if 1 == 1:

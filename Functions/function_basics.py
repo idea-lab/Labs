@@ -4,10 +4,25 @@ def functionname(arguments):
 
 def add(a, b):
 	return a+b
+ 
 
-print (add(1, 6))
+def main():
+	print (add(1, 6))
 
-#Lambdas/Anonymous functions
-mult = lambda x, y: x*y
+	#Lambdas/Anonymous functions
+	mult = lambda x, y: x*y
+	print(mult(2, 5))
 
-print(mult(2, 5))
+	#functions are also variables
+
+	copyOfAdd=add
+
+	print(copyOfAdd(2, 5), "\n")
+
+	operations = [add, lambda x, y: x-y, mult, lambda x, y: x/y]
+
+	for i in operations:
+		print(i(2,3))
+
+
+main()

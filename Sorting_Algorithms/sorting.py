@@ -75,12 +75,31 @@ def merge_sort(array):
     right = merge_sort(right)
     return merge(left, right)
 
-def quick_sort(array):
-
+def quick_sort(array, start=0, end=None):
+    if end is None:
+        end = len(array)
+    if(end-start<=1):
+        return
+    result=partition(array, start, end)
+    quick_sort(array, start, result)
+    quick_sort(array, result+1, end)
+    
+    return array
 def partition(array, start, end):
+    pivot = array[end-1]
+    i = start
+    for j in range(start, end-1):
+        if (array[j] <= pivot):
+            swap(array, i, j)
+            i=i+1
+    swap(array, i, end-1)
+
+    return i
 
 random_case = ["random case", 1, 9, 2, 8, 3, 7, 4, 6, 5]
+
 best_case = ["best case", 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
 worst_case = ["worst case", 9, 8, 7, 6, 5, 4, 3, 2, 1]
 
 test_cases=[random_case, best_case, worst_case]
@@ -93,6 +112,7 @@ testSortingAlgorithm(test_cases, selection_sort)
 
 testSortingAlgorithm(test_cases, merge_sort)
 
+testSortingAlgorithm(test_cases, quick_sort)
 # var = 0
 
 # while var <= 8:              

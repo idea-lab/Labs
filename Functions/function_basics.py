@@ -24,5 +24,4 @@ def main():
 	for i in operations:
 		print(i(2,3))
 
-
 main()

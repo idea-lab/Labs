@@ -1,16 +1,25 @@
-header
+body
 {
 	margin-left: 80px;
+}
+
+header
+{
 	margin-top: 50px;
 	font-size: 20px;
 }
 
 #inputDiv
 {
-	margin-left: 80px;
+	
 }
 
 #diceDiv
 {
-	margin-left: 80px;
+	
+}
+
+#clear
+{
+	
 }

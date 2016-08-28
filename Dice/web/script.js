@@ -1,7 +1,7 @@
 function rollDice()
-{	
-	console.log("entered");
+{
 	numDice = document.getElementById("diceInput").value;
+	document.getElementById("diceInput").value="";
 	
 	var diceRolls = [];
 	
@@ -36,4 +36,9 @@ function rollDice()
 		diceRolls.push(roll);
 		document.getElementById("diceDiv").innerHTML += diceRolls[i] + ' ';
 	}
+}
+
+function clearDice()
+{
+	document.getElementById("diceDiv").innerHTML = "";
 }
